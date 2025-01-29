@@ -17,7 +17,7 @@ export const LoginSignup = () => {
   const login = async() => {
     console.log("login func exec",formData);
     let responseData;
-    await fetch('http://localhost:4000/login',{
+    await fetch(`${process.env.REACT_APP_APP_URI}/login`,{
       method:'POST',
       headers:{
         Accept:'application/form-data',
@@ -38,7 +38,7 @@ export const LoginSignup = () => {
   const singup = async() => {
     console.log("sign up func exec",formData); 
     let responseData;
-    await fetch('http://localhost:4000/signup',{
+    await fetch(`${process.env.REACT_APP_APP_URI}/signup`,{
       method:'POST',
       headers:{
         Accept:'application/form-data',
